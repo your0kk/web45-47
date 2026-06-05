@@ -1,0 +1,13 @@
+/* Global stylesheet.  Tailwind's base, components and utilities
+ * directives are pulled in from the Tailwind CSS framework.  A
+ * custom font is imported from Google Fonts and applied to the
+ * body element. */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
