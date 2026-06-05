@@ -1,5 +1,4 @@
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
-import type { MetaDescriptor } from "@react-router/node";
 import { CartProvider } from "@/hooks/useCart";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,7 +9,7 @@ import "./app.css";
 // application in the CartProvider so that any component under this
 // layout can access the cart context via useCart().
 
-export function meta(): MetaDescriptor {
+export function meta() {
   return [{ title: "Ресторан Вкусно и точка" }];
 }
 

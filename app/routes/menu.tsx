@@ -1,12 +1,11 @@
 import { useState } from "react";
-import type { MetaDescriptor } from "@react-router/node";
 import menuData from "@/data/menu";
 import MenuCard from "@/components/MenuCard";
 import { useCart } from "@/hooks/useCart";
 import type { MenuItem } from "@/types";
 import restaurantInfo from "@/data/restaurant";
 
-export function meta(): MetaDescriptor {
+export function meta() {
   return [{ title: `Меню | ${restaurantInfo.name}` }];
 }
 

@@ -1,7 +1,6 @@
-import type { MetaDescriptor } from "@react-router/node";
 import restaurantInfo from "@/data/restaurant";
 
-export function meta(): MetaDescriptor {
+export function meta() {
   return [{ title: `О ресторане | ${restaurantInfo.name}` }];
 }
 

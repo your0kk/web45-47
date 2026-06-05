@@ -1,12 +1,12 @@
 import { useState } from "react";
+import type { FormEvent } from "react";
 import { Link, useNavigate } from "react-router";
 import { useCart } from "@/hooks/useCart";
-import type { MetaDescriptor } from "@react-router/node";
 import restaurantInfo from "@/data/restaurant";
 import Button from "@/components/ui/Button";
 import Modal from "@/components/ui/Modal";
 
-export function meta(): MetaDescriptor {
+export function meta() {
   return [{ title: `Оформление заказа | ${restaurantInfo.name}` }];
 }
 
@@ -31,7 +31,7 @@ export default function CheckoutPage() {
     );
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!name.trim() || !phone.trim()) {
       alert("Пожалуйста, заполните имя и телефон.");

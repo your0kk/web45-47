@@ -1,13 +1,10 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import { routerPlugin } from "@react-router/dev/plugin-vite";
+import { reactRouter } from "@react-router/dev/vite";
 import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
 
-// Vite configuration for the restaurant app.  This file wires up the
-// React plugin, the React Router plugin (to enable the router CLI
-// integration) and the Tailwind CSS plugin.  It exports a default
-// configuration object used by Vite during development and build
-// processes.
+// Конфигурация Vite: React Router отвечает за маршрутизацию и сборку,
+// Tailwind CSS — за стили, tsconfigPaths — за короткие импорты через @/.
 export default defineConfig({
-  plugins: [react(), routerPlugin(), tailwindcss()]  
+  plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
 });

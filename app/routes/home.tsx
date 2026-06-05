@@ -1,8 +1,7 @@
 import { Link } from "react-router";
 import restaurantInfo from "@/data/restaurant";
-import type { MetaDescriptor } from "@react-router/node";
 
-export function meta(): MetaDescriptor {
+export function meta() {
   return [{ title: `Главная | ${restaurantInfo.name}` }];
 }
 

@@ -1,10 +1,9 @@
 import { Link } from "react-router";
 import { useCart } from "@/hooks/useCart";
-import type { MetaDescriptor } from "@react-router/node";
 import restaurantInfo from "@/data/restaurant";
 import CartItem from "@/components/CartItem";
 
-export function meta(): MetaDescriptor {
+export function meta() {
   return [{ title: `Корзина | ${restaurantInfo.name}` }];
 }
 
